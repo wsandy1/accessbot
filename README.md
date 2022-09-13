@@ -1,32 +1,26 @@
 # Access Bot
 Containerized fork of [vexsuk/accessbot](https://github.com/vexsuk/accessbot), geared for running Discord access bots for multiple vAMSYS virtual airlines.
 
-## Configuration
-To configure this bot, a `config` folder needs to be made in the root directory that contains the `src`, `index.js` and `README.md` files with the following file:
-
-### config.json
+## Usage
+Clone this repository with
+```
+git clone https://github.com/wsandy1/accessbot.git
+```
+Edit `config.js` as follows:
 ```js
 {
-  "airlineID": "", // prefix for pilot ID usernames in the serve
-  "vamsysKey": "", // 'abcdefgh-ijkl-mnop-qrst-uvwxyz012345'
+  "airlineID": "", // 3 letter airline ID
+  "vamsysKey": "", // 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
   "discordToken": "", // Discord bot token
   "servers": {
     "012345678901234567": { // set to the guild ID
-      "accessRoleId": ["012345678901234567"], // snowflake for the role that should be assigned to users that have requested access - comma separate roles for multiple roles to be assigned (eg. ["012345678901234567", "765432109876543210"])
-      "nickSeparator": " - ", // the separator that should be used between the name and pilot ID in nicknames
-      "roleRemoval": { // section for configuration of the removal of role(s) when a pilot joins a server
+      "accessRoleId": ["012345678901234567"], // Role ID to assign when access is granted. Comma separate multiple roles: ["012345678901234567", "012345678901234567"]
+      "nickSeparator": " - ", // separator between name and pilot ID in nicknames
+      "roleRemoval": {
         "enabled": true, // set this to true if a role needs to be removed when a user is given access to the server, and false if not
-        "roleId": ["012345678901234567"] // if role removal is enabled above, set this to the snowflake of the role(s) that need to be removed when a user is given access; comma separate roles for multiple roles to be removed (eg. ["012345678901234567", "765432109876543210"])
+        "roleId": ["012345678901234567"] // required if enabled: true. Set to ID of role/roles to be removed when access is granted. Comma separated as with above.
       }
     }
   }
 }
 ```
-
-## Installation
-To install all dependencies required by the bot, run `npm install` in the root directory. Node v16.9.0 or higher is required.
-
-## Need help?
-This bot was created for the use of [vEXS](https://vexs.uk), a virtual airline hosted on vAMSYS that simulates the real world operations of Jet2.com.
-
-For any assistance with configuring the bot, or any other queries at all, please contact [webmaster@vexs.uk](mailto:webmaster@vexs.uk).
