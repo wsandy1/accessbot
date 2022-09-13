@@ -1,0 +1,15 @@
+{
+    "airlineID": "[3 letter airline ID]",
+    "vamsysKey": "[vAMSYS API Key]",
+    "discordToken": "[Discord bot token]",
+    "servers": {
+      "[Discord server Guild ID]": {
+        "accessRoleId": ["[ID of role to grant users]", "comma separated for multiple roles"],
+        "nickSeparator": "[separator for between name and pilot ID in nicknames, e.g. ' - ']",
+        "roleRemoval": {
+          "enabled": false,
+          "roleId": ["ID of role to remove", "comma separated for multiple roles", "not required if enabled: false"]
+        }
+      }
+    }
+  }
