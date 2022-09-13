@@ -1,5 +1,5 @@
 # Access Bot
-This is a bot specifically designed for the purpose of handling Discord access requests for vAMSYS virtual airlines.
+Containerized fork of [vexsuk/accessbot](https://github.com/vexsuk/accessbot), geared for running Discord access bots for multiple vAMSYS virtual airlines.
 
 ## Configuration
 To configure this bot, a `config` folder needs to be made in the root directory that contains the `src`, `index.js` and `README.md` files with the following file:
