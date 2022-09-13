@@ -24,3 +24,20 @@ Edit `config.js` as follows:
   }
 }
 ```
+Build the docker image:
+```
+cd accessbot
+docker build --tag [imagename] .
+```
+At this point, you can delete the downloaded files if you want.
+
+Run the docker container:
+```
+docker run -d --name [containername] --restart unless-stopped [imagename]
+```
+The container will run detatched from the terminal, and restart even if the docker daemon/server has been restarted.
+
+To stop the container:
+```
+docker stop [containername
+```
