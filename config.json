@@ -1,14 +1,14 @@
 {
-    "airlineID": "[3 letter airline ID]",
-    "vamsysKey": "[vAMSYS API Key]",
-    "discordToken": "[Discord bot token]",
+    "airlineID": "ABC",
+    "vamsysKey": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "discordToken": "xxxxxxxxxxxxxxxxxxxxxxxx",
     "servers": {
-      "[Discord server Guild ID]": {
-        "accessRoleId": ["[ID of role to grant users]", "comma separated for multiple roles"],
-        "nickSeparator": "[separator for between name and pilot ID in nicknames, e.g. ' - ']",
+      "1234567890123456": {
+        "accessRoleId": ["01234567890123456"],
+        "nickSeparator": " - ",
         "roleRemoval": {
-          "enabled": false,
-          "roleId": ["ID of role to remove", "comma separated for multiple roles", "not required if enabled: false"]
+          "enabled": true,
+          "roleId": ["1234567890123456"]
         }
       }
     }
