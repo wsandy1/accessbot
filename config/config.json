@@ -1,0 +1,15 @@
+{
+  "airlineID": "",
+  "vamsysKey": "",
+  "discordToken": "",
+  "servers": {
+    "012345678901234567": { 
+      "accessRoleId": ["012345678901234567"], 
+      "nickSeparator": " - ",
+      "roleRemoval": {
+        "enabled": true,
+        "roleId": ["012345678901234567"]
+      }
+    }
+  }
+}
