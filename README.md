@@ -39,5 +39,5 @@ The container will run detatched from the terminal, and restart even if the dock
 
 To stop the container:
 ```
-docker stop [containername
+docker stop [containername]
 ```
